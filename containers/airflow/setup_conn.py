@@ -14,6 +14,7 @@ extra = {
     "region_name": region_name,
     "host": endpoint_url,
 }
+
 # Convert to JSON string
 extra_json = str(extra).replace("'", '"')
 # Define the CLI command

@@ -3,6 +3,7 @@ import shutil
 import time
 from datetime import datetime, timedelta
 
+
 import boto3
 import duckdb
 from airflow import DAG
@@ -12,6 +13,7 @@ from airflow.providers.amazon.aws.operators.s3 import S3CreateBucketOperator
 from airflow.providers.amazon.aws.transfers.local_to_s3 import (
     LocalFilesystemToS3Operator,
 )
+
 from airflow.providers.amazon.aws.transfers.sql_to_s3 import SqlToS3Operator
 
 

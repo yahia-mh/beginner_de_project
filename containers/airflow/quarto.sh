@@ -9,3 +9,4 @@ ln -s ~/opt/quarto-1.5.43/bin/quarto ~/.local/bin/quarto
 
 ( echo ""; echo 'export PATH=$PATH:~/.local/bin\n' ; echo "" ) >> ~/.profile
 source ~/.profile
+

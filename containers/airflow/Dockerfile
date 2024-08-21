@@ -9,6 +9,7 @@ COPY setup_conn.py $AIRFLOW_HOME
 
 User root
 
+
 # RUN python $AIRFLOW_HOME/setup_conn.py
 # RUN apt-get update && \
 #     apt-get install -y --no-install-recommends \

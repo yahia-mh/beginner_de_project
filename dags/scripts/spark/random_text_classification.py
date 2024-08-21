@@ -6,6 +6,7 @@ from pyspark.sql import SparkSession
 from pyspark.sql.functions import array_contains, lit
 
 
+
 def random_text_classifier(input_loc: str, output_loc: str, run_id: str) -> None:
     """
     This is a dummy function to show how to use spark, It is supposed to mock
@@ -31,6 +32,7 @@ def random_text_classifier(input_loc: str, output_loc: str, run_id: str) -> None
     remover = StopWordsRemover(inputCol="review_token", outputCol="review_clean")
     df_clean = remover.transform(df_tokens).select("cid", "review_clean")
 
+
     # function to check presence of good
     df_out = df_clean.select(
         "cid",
@@ -39,6 +41,7 @@ def random_text_classifier(input_loc: str, output_loc: str, run_id: str) -> None
     df_fin = df_out.withColumn("insert_date", lit(run_id))
     # parquet is a popular column storage format, we use it here
     df_fin.write.mode("overwrite").parquet(output_loc)
+
 
 
 if __name__ == "__main__":
